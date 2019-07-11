@@ -10,13 +10,17 @@
       <p style="font-size:20px;">A neighborhood social application, that keeps you updated with your surroundings.</p><br>
     </div>
     <div class="welcome-buttons" style="text-align: center;position:absolute;left:40%;">
-      <a href="#" style="background-color: #f44336; padding: 15px 30px;text-align: center;display: inline-block;text-decoration:none;color:white;">Login</a>
+      <a href="{% url 'login' %}" style="background-color: #f44336; padding: 15px 30px;text-align: center;display: inline-block;text-decoration:none;color:white;">Login</a>
     </div>
     <div class="welcome-buttons" style="text-align: center;position:absolute;left:50%;padding:0 0 0 20px;">
-      <a href="#" style="background-color: #f44336; padding: 15px 25px;text-align: center;display: inline-block;text-decoration:none;color:white;">Register</a>
+      <a href="{% url 'register_page' %}" style="background-color: #f44336; padding: 15px 25px;text-align: center;display: inline-block;text-decoration:none;color:white;">Register</a>
     </div>
-    <button onclick="getLocation()">Try It</button>
+    <!-- <button onclick="getLocation()">Try It</button> -->
+    <!-- <div class="location_get">
+      {{loc}}
+    </div> -->
 
+    <!--  Below is the code for allowing location tracker using Javascript  -->
     <p id="demo"></p>
 
     <script>
