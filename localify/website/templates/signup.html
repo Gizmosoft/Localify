@@ -1,11 +1,17 @@
+{% extends "base.html" %}
+
 {% block content %}
 
 <h3>Signup Form</h3>
 
+<div class="noticeMessage">
+  <p align="center" style="border:1px solid red">This page is currently under maintenance, sorry for the ugly UI :( </p>
+</div><br>
+
 <form method="POST">
 {% csrf_token %}
-
 {{ form.as_p }}
+
 <button type="submit">Register</button>
 </form>
 
