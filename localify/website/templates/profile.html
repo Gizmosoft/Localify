@@ -1,15 +1,18 @@
+{% extends "base.html" %}
+
 {% block content %}
 
 <h2>Welcome to Profile Page</h2>
-<!-- <p>
-{{ usr }}
-</p> -->
+
+<!-- Related to authentication only  -->
 {% if user.is_authenticated %}
 <p>Welcome, {{user.first_name}}</p>
-<p><a href="{% url 'logout' %}">Logout</a></p>
+<!-- <p><a href="{% url 'logout' %}">Logout</a></p> -->
 
 {% else %}
 <p>Please <a href="{% url 'login' %}">Login</a></p>
 {% endif %}
+
+
 
 {% endblock content %}

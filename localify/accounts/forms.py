@@ -13,7 +13,7 @@ class RegistrationForm(UserCreationForm):
             'username',
             'first_name',
             'last_name',
-            'email',
+            'email'
         }
 
     def save(self, commit=True):

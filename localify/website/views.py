@@ -11,7 +11,8 @@ from django.contrib.auth.models import User
 #     template_name = 'home.html'
 
 def home_page(request):
-    return render(request,"home.html")
+    context = {"home_page": "active"}
+    return render(request,"home.html",context)
 
 def user_profile(request):
     # superusers_username = User.objects.filter(is_superuser=True).values_list('username', flat=True).get(pk=1)
