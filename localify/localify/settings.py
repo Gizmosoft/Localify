@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'accounts',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'user_profile'
 LOGOUT_REDIRECT_URL = 'home_page'
+
+# Channels
+ASGI_APPLICATION = 'localify.routing.application'
